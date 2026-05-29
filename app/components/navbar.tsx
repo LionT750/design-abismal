@@ -37,7 +37,7 @@ function ContactIcon() {
 
 export default function Navbar() {
     return (
-        <nav className="w-full h-16 flex items-center justify-end px-8 self-end z-10">
+        <nav className="w-full h-22 flex items-center justify-end px-8 self-end z-10">
             <div className="text-sm md:text-xl font-bold text-black p-4">My Portfolio</div>
             <div className="flex items-center gap-6">
                 <Link href="/" className="text-black hover:text-neutral-600 transition-colors" aria-label="Home">

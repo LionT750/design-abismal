@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "./navbar";
 import bg from "../../public/bg_light.png";
 import Focal from "./focal";
+import Logo from "./logo";
 
 export default function Hero() {
   return (
@@ -18,7 +19,11 @@ export default function Hero() {
       </div>
       {/* Gradient overlay — darkens left side for text readability */}
       <div className="absolute inset-0 z-1 bg-linear-to-r from-black/70 via-black/30 to-transparent" />
-      <Navbar/>
+      <div className="flex items-start justify-between z-10">
+        <Logo />
+        <Navbar/>
+      </div>
+      
 
       <Focal />
       
