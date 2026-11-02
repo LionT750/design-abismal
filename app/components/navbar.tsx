@@ -1,57 +1,59 @@
 import Link from "next/link";
 
-function HomeIcon() {
+function EarthIcon() {
     return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
+        <svg
+            width="20"
+            height="20"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect
+                x="3"
+                y="3"
+                width="94"
+                height="94"
+                fill="#EBC43F"
+                stroke="#111111"
+                strokeWidth="4"
+            />
+            <path
+                d="M50 17 V78 M27 43 H73 M19 80 H81"
+                stroke="#111111"
+                strokeWidth="7.5"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+            />
         </svg>
     );
 }
 
-function AboutIcon() {
-    return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-        </svg>
-    );
-}
-
-function ProjectsIcon() {
-    return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-        </svg>
-    );
-}
-
-function ContactIcon() {
-    return (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-        </svg>
-    );
-}
-
-export default function Navbar() {
+export default function Navbar( {onUniteClick} ) {
     return (
         <nav className="w-full h-16 flex items-center justify-end px-8 self-end z-10">
-            <div className="text-sm md:text-xl font-bold text-black p-4">My Portfolio</div>
+            <button className="absolute top-0 left-0
+                            flex items-center justify-center
+                            cursor-pointer 
+                            font-mono text-white tracking-light text-justify 
+                            rounded-xl border-1 border-blue-100
+                            w-1/8 
+                            h-10 md:mt-2 md:ml-2
+                            backdrop-blur-sm
+                            bg-white/10
+                            hover:scale-110 hover:border-2 hover:border-blue-200
+                            transition-all duration-100"
+                            onClick={() => onUniteClick()}> Revamp </button>
             <div className="flex items-center gap-6">
-                <Link href="/" className="text-black hover:text-neutral-600 transition-colors" aria-label="Home">
-                    <HomeIcon />
-                </Link>
-                <Link href="/about" className="text-black hover:text-neutral-600 transition-colors" aria-label="About">
-                    <AboutIcon />
-                </Link>
-                <Link href="/projects" className="text-black hover:text-neutral-600 transition-colors" aria-label="Projects">
-                    <ProjectsIcon />
-                </Link>
-                <Link href="/contact" className="text-black hover:text-neutral-600 transition-colors" aria-label="Contact">
-                    <ContactIcon />
-                </Link>
+                <button className="inline-flex items-center justify-center
+                border border-transparent
+                p-2 rounded-md
+                text-black
+                hover:bg-yellow-500 hover:border-gray-500
+                transition-colors"
+                aria-label="Earth">
+                <EarthIcon />
+                </button>
             </div>
         </nav>
     );
