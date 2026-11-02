@@ -47,7 +47,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${instrumentSans.variable} ${zenKakuGothicNew.variable}`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full min-w-full flex flex-col">
         {children}
         </body>
     </html>

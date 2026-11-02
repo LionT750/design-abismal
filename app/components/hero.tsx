@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Navbar from "./navbar";
-import bg from "../../public/bg_light.png";
+import Earthbg from "../../public/bg.png";
+import AIbg from "../../public/ai-bg.jpg";
 import Focal from "./focal";
 import FocalAI from "./focalAI";
 import {useState} from "react";
 import {arrayIterator} from "../sharedUtils/util";
+
 
 export default function Hero() {
 
@@ -23,9 +25,9 @@ export default function Hero() {
 
   return (
     
-    <div className="relative w-full h-[30vh] md:h-screen flex flex-col justify-start">
+    <div className="relative w-full h-[100vh] md:h-screen flex flex-col justify-start">
       <Image
-        src={bg}
+        src={selectedFocal === "Earth" ? Earthbg : AIbg}
         alt="background"
         fill
         className="absolute inset-0 z-0 object-cover pointer-events-none"

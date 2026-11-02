@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+type NavbarProps = {
+    onUniteClick: () => void;
+};
+
+
 function EarthIcon() {
     return (
         <svg
@@ -29,32 +34,15 @@ function EarthIcon() {
     );
 }
 
-export default function Navbar( {onUniteClick} ) {
+export default function Navbar( {onUniteClick}: NavbarProps ) {
     return (
         <nav className="w-full h-16 flex items-center justify-end px-8 self-end z-10">
-            <button className="absolute top-0 left-0
-                            flex items-center justify-center
-                            cursor-pointer 
-                            font-mono text-white tracking-light text-justify 
-                            rounded-xl border-1 border-blue-100
-                            w-1/8 
-                            h-10 md:mt-2 md:ml-2
-                            backdrop-blur-sm
-                            bg-white/10
-                            hover:scale-110 hover:border-2 hover:border-blue-200
-                            transition-all duration-100"
-                            onClick={() => onUniteClick()}> Revamp </button>
-            <div className="flex items-center gap-6">
-                <button className="inline-flex items-center justify-center
-                border border-transparent
-                p-2 rounded-md
-                text-black
-                hover:bg-yellow-500 hover:border-gray-500
-                transition-colors"
-                aria-label="Earth">
-                <EarthIcon />
-                </button>
-            </div>
+            
+            <button className="absolute top-0 left-0 ml-[2vw] mt-[2vw] cursor-pointer inline-block px-4 py-2 font-mono hover:scale-105 group" onClick={onUniteClick}>
+                <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-red-500"></span>
+                <span className="relative text-black group-hover:text-white"> 火 Revamp 火 </span>
+            </button>
         </nav>
     );
 }

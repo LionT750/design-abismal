@@ -20,25 +20,31 @@ export default function Hero() {
             else
                 setDisplayText(nextText);
         }, 3500);
+        return () => clearInterval(interval)
     }, []);
 
 
     return (
-        <div className="absolute top-0 left-0 z-20 text-left
-                        md:mt-50 md:ml-35 md:mr-50
-                        animate-in fade-in slide-in-from-left-8 duration-550 
+        <div className="absolute top-0 left-0 z-30 text-left
+                        mt-[30vh] ml-[5vw] mr-[22vw]
+                        animate-in fade-in slide-in-from-left-8 duration-750 
                         bg-black/10 rounded-lg 
                         backdrop-saturate-115
                         ">
-            <h1 className="font-display text-2xl md:text-7xl font-black text-white tracking-tight leading-[0.95] uppercase">
+            <h1 className="font-display text-2xl md:text-7xl font-black text-white text-left tracking-tight leading-[0.95] uppercase">
                 Creating Designs With
-                <span className="font-zen text-red-400"> Passion & </span>
-                <span key={displayText} className="inline-block font-display text-red-400 
-                animate-in fade-in slide-in-from-bottom-8"> {displayText}</span>
+                <span className="font-zen text-red-500"> Passion & </span>
+                <span key={displayText} className="inline-block font-display text-red-500 
+                animate-in fade-in slide-in-from-bottom-8 duration-800"> {displayText}</span>
             </h1>
-            <div className="font-mono mt-4 md:mr-70 shadow-md hover:shadow-lg transition-shadow duration-300 text-lg md:text-2xl font-medium text-white tracking-tight leading-[1.2]">
+            <div className="font-mono mt-[4vh] mr-[30vw] shadow-md hover:shadow-lg transition-shadow duration-300 text-lg text-left md:text-2xl font-medium text-white tracking-tight leading-[1.2]">
                 Crafting meaningful digital experiences through thoughtful design and purposeful development.
             </div>
+            <div className="absolute -bottom-2 left-0
+            h-[7px] w-5/6 rounded-bl-2xl
+            border-b border-black-150
+            origin-left scale-x-0
+            animate-[borderGrow_1500ms_ease-out_forwards]"></div>
         </div>
     );
 }
