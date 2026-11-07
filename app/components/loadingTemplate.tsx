@@ -13,7 +13,7 @@ export default function LoadingTemplate() {
           loading="eager"
           width={300}
           height={300}   
-          className="absolute top-1/2 left-1/2 w-[15vw] h-auto  rounded-full z-10 enter-from-top"
+          className="absolute top-1/2 left-1/2 w-[15vw] h-auto  rounded-full border-5 border-black/50 z-10 enter-from-top"
         />
         <div className="absolute inset-0 panel-blue sheen stripes [clip-path:polygon(60%_0,100%_0,100%_100%,40%_100%)] enter-from-right">
         </div>

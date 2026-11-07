@@ -3,6 +3,9 @@
 import {useState, useEffect} from "react";
 import LoadingTemplate from "./components/loadingTemplate";
 import Hero from "./components/hero";
+import AboutMe from "./components/aboutMe";
+import Link from "next/link";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
 
 
 export default function Home() {
@@ -24,7 +27,9 @@ export default function Home() {
 
     <div className="relative grid grid-cols-1 gap-4">
       <Hero />
+      <AboutMe />
     </div>
   );
   }
-}
+} 
+
