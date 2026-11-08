@@ -50,7 +50,7 @@ export default function AboutMe() {
         className="absolute inset-0 z-0 object-cover pointer-events-none saturate-100"
          />
        <div className="absolute inset-0 z-1 bg-linear-to-l from-black/70 via-black/30 to-transparent pointer-events-none" />
-        <Link href="/" className="absolute top-[4vh] left-1/2 transform -translate-x-1/2 mb-4 text-white text-4xl animate-bounce cursor-pointer hover:text-gray-400 transition-colors duration-500 z-10">
+        <Link href="#home" className="absolute top-[4vh] left-1/2 transform -translate-x-1/2 mb-4 text-white text-4xl animate-bounce cursor-pointer hover:text-gray-400 transition-colors duration-500 z-10">
         <FaRegArrowAltCircleUp className="text-white text-5xl animate-bounce hover:scale-120" />
         </Link>
         <div className="absolute top-[15vh] right-[2vw] z-1 flex flex-col items-center text-center max-w-3xl

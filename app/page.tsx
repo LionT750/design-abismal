@@ -27,6 +27,28 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const sections = ["home", "about"]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const url = entry.target.id === "home" ? "/" : `/#${entry.target.id}`;
+          if (location.pathname + location.hash !== url) {
+            window.history.replaceState(null, "", url);
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className="relative grid grid-cols-1 gap-4">

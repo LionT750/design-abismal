@@ -28,7 +28,7 @@ export default function Hero() {
 
   return (
     
-    <div className="relative w-full h-[100vh] md:h-screen flex flex-col justify-start">
+    <div id="home"className="relative w-full h-[100vh] md:h-screen flex flex-col justify-start">
       <AnimatedBackground animationName="starryNight" theme="portfolio" 
       style={{position: "absolute", inset:0, zIndex: 1, mixBlendMode: "screen", filter: "contrast(1.6) brightness(0.8)", speed: 1.5 }}/>
       <Image
