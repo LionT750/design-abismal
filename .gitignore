@@ -43,3 +43,6 @@ next-env.d.ts
 
 # full-size source images (WebP copies live in public/)
 image-originals/
+
+# Windows download tags
+*:Zone.Identifier

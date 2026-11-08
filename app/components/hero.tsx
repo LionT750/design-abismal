@@ -4,14 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./navbar";
 import Earthbg from "../../public/bg_light.webp";
-import AIbg from "../../public/ai-bg.webp";
 import Focal from "./focal";
-import FocalAI from "./focalAI";
 import {useState} from "react";
 import {arrayIterator} from "../sharedUtils/util";
 import { FaLinkedin } from "react-icons/fa6";
 import { CgSmartHomeWashMachine } from "react-icons/cg";
-import { FaRegArrowAltCircleDown, FaRegArrowAltCircleUp, FaGithubSquare } from "react-icons/fa";
+import { FaRegArrowAltCircleDown, FaGithubSquare } from "react-icons/fa";
 import { AnimatedBackground } from 'animated-backgrounds';
 
 
@@ -34,7 +32,7 @@ export default function Hero() {
       <AnimatedBackground animationName="starryNight" theme="portfolio" 
       style={{position: "absolute", inset:0, zIndex: 1, mixBlendMode: "screen", filter: "contrast(1.6) brightness(0.8)", speed: 1.5 }}/>
       <Image
-        src={selectedFocal === "Earth" ? Earthbg : AIbg}
+        src={Earthbg}
         alt="background"
         fill
         className="absolute inset-0 z-0 object-cover pointer-events-none saturate-100"
@@ -46,8 +44,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-1 bg-linear-to-r from-black/70 via-black/30 to-transparent" />
       <Navbar onUniteClick={handleFocalBackandForth} />
 
-      {selectedFocal === "Earth" ? <Focal /> : null}
-      {selectedFocal === "AI" ? <FocalAI /> : null}
+      <Focal />
 
       <div key={selectedFocal} className="absolute top-0 right-0 mr-[2vw] mt-[2vw] gap-8 
                       flex w-auto h-16 z-10
