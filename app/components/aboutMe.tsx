@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedBackground } from 'animated-backgrounds';
-import { FaRegArrowAltCircleUp, FaUser, FaAws } from "react-icons/fa";
+import { FaRegArrowAltCircleUp, FaAws } from "react-icons/fa";
 import {
   SiOpenjdk,
   SiSpringboot,
@@ -18,6 +18,7 @@ import {
   SiClaude,
 } from "react-icons/si";
 import bg from "../../public/about_me_bg_light.webp";
+import mePhoto from "../../public/me-photo.webp";
 
 const techStack = [
   { name: "Java", icon: SiOpenjdk },
@@ -54,7 +55,7 @@ export default function AboutMe() {
         </Link>
         <div className="absolute top-[15vh] right-[2vw] z-1 flex flex-col items-center text-center max-w-3xl
                         rounded-3xl border border-white/15 bg-black/55 backdrop-blur-md shadow-2xl
-                        px-5 py-5 md:px-8 md:py-6 text-white max-h-[80vh] overflow-y-auto">
+                        px-5 py-5 md:px-8 md:py-5 text-white max-h-[80vh] overflow-y-auto">
         <h1 className="font-display text-3xl md:text-5xl font-black uppercase tracking-tight leading-[0.95] mb-4 text-white">
           About <span className="font-zen text-red-500">Me</span>
         </h1>
@@ -62,7 +63,7 @@ export default function AboutMe() {
           I am a passionate developer with a keen interest in creating innovative solutions. My expertise lies in web development, and I enjoy working on projects that challenge me to learn and grow. I am always eager to collaborate with like-minded individuals and contribute to exciting ventures.
         </p>
 
-        <h2 className="font-display text-xl md:text-3xl font-black uppercase tracking-tight leading-[0.95] mt-5 mb-2 text-white">
+        <h2 className="font-display text-xl md:text-3xl font-black uppercase tracking-tight leading-[0.95] mt-4 mb-2 text-white">
           Tech <span className="font-zen text-red-500">Stack</span>
         </h2>
         <p className="font-mono text-sm md:text-base font-medium tracking-tight leading-snug text-center text-white/75">
@@ -80,10 +81,22 @@ export default function AboutMe() {
           ))}
         </ul>
 
-        <div className="mt-4 shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-dashed border-red-500/80 bg-white/10 flex flex-col items-center justify-center gap-1 text-white/75 overflow-hidden">
-          <FaUser className="text-3xl md:text-4xl" aria-hidden="true" />
-          <span className="font-mono text-xs">Your photo</span>
+        <div className="relative mt-3 shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-red-500/80 overflow-hidden shadow-lg">
+          <Image
+            src={mePhoto}
+            alt="Photo of Lucas"
+            fill
+            sizes="(min-width: 768px) 112px, 96px"
+            placeholder="blur"
+            className="object-cover"
+          />
         </div>
+        <p className="mt-2 font-display text-lg md:text-xl font-black uppercase tracking-tight leading-[0.95] text-white">
+          Lucas das Neves Matheus
+        </p>
+        <p className="mt-1 font-mono text-xs md:text-sm font-medium tracking-tight text-white">
+          Software <span className="text-red-500">Engineer</span>
+        </p>
         </div>
       </div>
   );
