@@ -8,7 +8,7 @@ export default function LoadingTemplate() {
         <div className="absolute inset-0 panel-red sheen stripes [clip-path:polygon(0_0,60%_0,40%_100%,0_100%)] enter-from-left">
         </div>
         <Image 
-          src="/tokyo_seal_v2.png"
+          src="/tokyo_seal_v2.webp"
           alt="Seal"
           loading="eager"
           width={300}

@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .vscode/settings.json
+
+# full-size source images (WebP copies live in public/)
+image-originals/
