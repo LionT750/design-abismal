@@ -1,22 +1,40 @@
 import Image from "next/image";
-import {ViewTransition} from "react";
-
+import redSide from "../../public/loading_red.webp";
+import blueSide from "../../public/loading_blue.webp";
 
 export default function LoadingTemplate() {
   return (
-    <div className="relative h-screen w-screen">
-        <div className="absolute inset-0 panel-red sheen stripes [clip-path:polygon(0_0,60%_0,40%_100%,0_100%)] enter-from-left">
+    <div className="loading-scene relative h-screen w-screen overflow-hidden bg-black">
+        <div className="absolute inset-0 loading-clip-red enter-from-left">
+          <Image
+            src={redSide}
+            alt=""
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            className="object-cover pointer-events-none"
+          />
         </div>
-        <Image 
+        <div className="absolute inset-0 loading-clip-blue enter-from-right">
+          <Image
+            src={blueSide}
+            alt=""
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            className="object-cover pointer-events-none"
+          />
+        </div>
+        <Image
           src="/tokyo_seal_v2.webp"
           alt="Seal"
           loading="eager"
-          width={300}
-          height={300}   
-          className="absolute top-1/2 left-1/2 w-[15vw] h-auto  rounded-full border-5 border-black/50 z-10 enter-from-top"
+          width={600}
+          height={600}
+          className="loading-seal absolute top-1/2 left-1/2 h-auto rounded-full border-5 border-black/50 z-10 enter-from-top"
         />
-        <div className="absolute inset-0 panel-blue sheen stripes [clip-path:polygon(60%_0,100%_0,100%_100%,40%_100%)] enter-from-right">
-        </div>
     </div>
 
   );
