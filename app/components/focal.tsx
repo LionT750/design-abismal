@@ -27,7 +27,7 @@ export default function Hero() {
     return (
         <div className="absolute top-0 left-0 z-30 text-left
                         mt-[30vh] ml-[5vw] mr-[22vw]
-                        animate-in fade-in slide-in-from-left-8 duration-750 
+                        animate-in fade-in slide-in-from-left-8 duration-300 
                         bg-black/10 rounded-lg 
                         backdrop-saturate-115
                         ">
@@ -35,7 +35,7 @@ export default function Hero() {
                 Creating Designs With
                 <span className="font-zen text-red-500"> Passion & </span>
                 <span key={displayText} className="inline-block font-display text-red-500 
-                animate-in fade-in slide-in-from-bottom-8 duration-800"> {displayText}</span>
+                animate-in fade-in slide-in-from-bottom-8 duration-350"> {displayText}</span>
             </h1>
             <div className="font-mono mt-[4vh] mr-[30vw] shadow-md hover:shadow-lg transition-shadow duration-300 text-lg text-left md:text-2xl font-medium text-white tracking-tight leading-[1.2]">
                 Crafting meaningful digital experiences through thoughtful design and purposeful development.
@@ -44,7 +44,7 @@ export default function Hero() {
             h-[7px] w-5/6 rounded-bl-2xl
             border-b border-black-150
             origin-left scale-x-0
-            animate-[borderGrow_1500ms_ease-out_forwards]"></div>
+            animate-[borderGrow_600ms_ease-out_forwards]"></div>
         </div>
     );
 }

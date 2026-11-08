@@ -50,7 +50,7 @@ export default function Hero() {
                       flex w-auto h-16 z-10
                       b-g-black/50 rounded-full px-6 py-2 items-center justify-center
                       bg-black/40 backdrop-blur-sm
-                      animate-in fade-in slide-in-from-left-8 duration-750 hover:scale-105 hover:shadow-lg">
+                      animate-in fade-in slide-in-from-left-8 duration-300 hover:scale-105 hover:shadow-lg">
         <FaGithubSquare
           title="Go to my GitHub"
           className="text-white text-3xl cursor-pointer hover:text-gray-400 hover:scale-120 transition-colors duration-300"
