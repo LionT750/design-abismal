@@ -29,7 +29,8 @@ const instrumentSans = Instrument_Sans({
 const zenKakuGothicNew = Zen_Kaku_Gothic_New({
   variable: "--font-zen",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
+  weight: ["900"],
+  preload: false,
 });
 
 export const metadata: Metadata = {
