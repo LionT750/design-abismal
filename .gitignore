@@ -46,3 +46,9 @@ image-originals/
 
 # Windows download tags
 *:Zone.Identifier
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
